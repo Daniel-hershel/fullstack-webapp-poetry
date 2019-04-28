@@ -10,6 +10,7 @@
   </div>
   <div class = "next">
    <a style="cursor: pointer; text-decoration: underline" v-on:click="navigate()">START</a>
+
   </div>
   </div>
 </template>
@@ -33,7 +34,12 @@ export default {
  methods: {
    navigate(){
      router.push({name: "Shedding"})
+   },
+     navigateGallery(){
+       console.log('navigating')
+     router.push({name: "Gallery"})
    }
+   
  }
 }
 </script>
@@ -47,7 +53,8 @@ export default {
   width: 99vw;
   height: 100vh;
   margin-top:0;
-  grid-template-rows: 5vh 75vh 5vh;
+  grid-gap: 2.5vh;
+  grid-template-rows: 10vh 65vh 10vh;
   grid-template-columns: 95vw;
   margin:auto;
   margin-top:0;
@@ -58,16 +65,20 @@ export default {
 
 }
 
+.next{
+font-size: 9vw;
+color: #f76262;
+
+}
 .title{
 font-size: 3.1vw;
-color:#9effa9;
+color:#f76262;
 }
 
 .instructions{
   display: flex;
   flex-direction: column;
   width: 75%;
-  justify-content: center;
     margin-left:auto;
   margin-right:auto;
   /* not working or has no effect right now */
@@ -94,7 +105,10 @@ and (orientation: portrait) {
 /* Styles */
 h3{
   font-size:3.9vw;
-  background: pink;
+}
+.instructions{
+  justify-content: center;
+
 }
 }
 
@@ -107,15 +121,11 @@ and (-webkit-min-device-pixel-ratio: 2)
 and (orientation: landscape) {
  h3{
      font-size:3.9vw;
-    background: pink;
+    /* background: pink; */
  }
 }
  
 
 
-.next{
-font-size: 9vw;
-color: #ffea85;
 
-}
 </style>

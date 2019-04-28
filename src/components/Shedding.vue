@@ -6,10 +6,13 @@
      <div class = "response">
      <form>
         <textarea v-model="firstResponse.userResponse" class = "userInput" placeholder="respond to the prompt here" type="text"/></textarea>
-  <button type="submit" @click.prevent="addResponse()">NEXT</button>
     </form>
   </div>
+    <div class = "prev">
+  <button type="submit" @click.prevent="addResponse()">NEXT</button>
 
+
+    </div>
   </div>
 </template>
 
@@ -61,15 +64,12 @@ fitText
    display: grid;
   width: 100vw;
   height: 100vh;
-  margin-top:0;
-  grid-template-rows: 35vh 40vh 9vh;
-  grid-template-columns: 95vw;
+  grid-template-rows: 35vh 30vh 20vh;
+  grid-template-columns: 100vw;
   margin:0;
   padding:0;
   margin-top:0;
   padding-top:0;
-  /* background: #402785;
-  color: #fafb97; */
     background: #29252c;
   color: #ffea85;
 }
@@ -101,9 +101,9 @@ button{
 font-size: 5vw;
 width: 50vw;
 height: 10vh;
-background: #9effa9;
+background: #f76262;
 font-family: 'Chivo', sans-serif;
 font-weight: 700;
-color: #333146;
+color: #ffea85;
 }
 </style>

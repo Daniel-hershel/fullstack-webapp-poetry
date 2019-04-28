@@ -11,7 +11,7 @@ import HelloWorld from './components/HelloWorld.vue'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    HelloWorld,
   }
 }
 </script>
@@ -30,8 +30,9 @@ body{
   text-align: center;
   color: #2c3e50;
   /* background:#29252c; */
-  margin:0;
-  padding: 0;
+  width:100vw;
+  margin-left:0;
+  padding-left: 0;
 
   /* margin-top: 60px; */
 }

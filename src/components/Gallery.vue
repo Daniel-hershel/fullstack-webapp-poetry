@@ -1,6 +1,6 @@
 <template>
 <div class = "gallery">
-<div class="poem" v-for="item in items.reverse()" :key="item['.key']">
+<div class="poem" v-for="item in items" :key="item['.key']">
     <h2>{{item.prompt}}</h2>
     <h3>{{item.responseOne}}</h3>
     <h2>{{item.promptTwo}}</h2>

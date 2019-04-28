@@ -70,9 +70,9 @@ export default {
   width: 100vw;
   height: 100vh;
   margin-top:0;
-  grid-template-rows: 80vh 20vh;
+  grid-template-rows: 80vh 10vh;
   grid-gap: 5vh;
-  grid-template-columns: 95vw;
+  grid-template-columns: 100vw;
   margin:0;
   padding:0;
   margin-top:0;
@@ -91,13 +91,13 @@ export default {
 }
 
 h3{
-font-size: 3.3vw;
+font-size: 2.9vw;
 font-weight: 700;
 
 }
 
 h2{
-font-size: 3.6vw;
+font-size: 3.1vw;
 font-weight: 400;
 width: 75%;
 margin: auto;

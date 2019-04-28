@@ -81,9 +81,9 @@ export default {
      display: grid;
   width: 100vw;
   height: 100vh;
-  margin-top:0;
-  grid-template-rows: 25vh 30vh 20vh;
-  grid-template-columns: 95vw;
+  grid-gap:1.5vw;
+  grid-template-rows: 35vh 30vh 20vh;
+  grid-template-columns: 100vw;
   margin:0;
   padding:0;
   margin-top:0;
