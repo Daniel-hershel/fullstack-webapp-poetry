@@ -21,7 +21,11 @@ export default {
 body{
   width:100vw;
  overflow-x: hidden;
-  background:#29252c;
+   margin-left:0;
+  padding-left: 0;
+  margin-top:0;
+  padding-top: 0;
+  /* background:#29252c; */
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -31,8 +35,7 @@ body{
   color: #2c3e50;
   /* background:#29252c; */
   width:100vw;
-  margin-left:0;
-  padding-left: 0;
+  margin: none;
 
   /* margin-top: 60px; */
 }

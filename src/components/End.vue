@@ -1,5 +1,5 @@
 <template>
-<div class = "end">
+<div class = "end" v-bind:class="{'alt':bgc}">
     <div class = "finalPoem">
       <transition 
     v-on:before-enter="beforeEnter"
@@ -17,9 +17,14 @@
     </transition>
     </div>
     <div class = "options">
-    <button type="submit" @click.prevent="navigateHome()">START AGAIN</button>
-    
-    <button type="submit" @click.prevent="navigateGallery()">GALLERY OF POEMS</button>
+    <button v-bind:class="{'alt':bgc}" type="submit" @click.prevent="navigateHome()">START AGAIN</button>
+    <button v-bind:class="{'alt':bgc}" type="submit" @click.prevent="navigateGallery()">GALLERY OF POEMS</button>
+    <!-- <button type="submit" @click.prevent="changeTheme()">CHANGE THEME</button> -->
+    <div class = "label">
+    Alternate Theme
+    </div>
+    <toggle-button class="toggle"  :labels="true"  :color="{checked: '#f83e4b', unchecked: '#f7e185'}" :font-size="18" :width="220"
+          :height="40" @change="changeTheme()"/>
     </div>
 </div>
 </template>
@@ -40,7 +45,8 @@ export default {
     },
     data (){
         return{
-        items: []
+        items: [],
+        bgc:false
         }
     },
     methods: {
@@ -48,7 +54,7 @@ export default {
              Velocity(el, { opacity:0 }, { duration: 60,complete:done})
             },
         enter(el,done){
-             Velocity(el, { opacity:1 }, { duration: 1600,complete:done})
+             Velocity(el, { opacity:1 }, { delay: 800, duration: 2600,complete:done})
             console.log('working')
 
         },
@@ -57,7 +63,13 @@ export default {
         },
         navigateGallery(){
      router.push({name: "Gallery"})
-   }
+        },
+        changeTheme(){
+        this.bgc = !this.bgc
+      
+          
+
+        }
     }
 }
 </script>
@@ -70,7 +82,7 @@ export default {
   width: 100vw;
   height: 100vh;
   margin-top:0;
-  grid-template-rows: 80vh 10vh;
+  grid-template-rows: 70vh 25vh;
   grid-gap: 5vh;
   grid-template-columns: 100vw;
   margin:0;
@@ -82,6 +94,16 @@ export default {
   /* color: #8ecccc; */
 }
 
+.toggle{
+    color: #444;
+}
+.label{
+    font-size: 26px;
+}
+.alt{
+background: #fffff8;
+color: #444;
+}
 .finalPoem{
     font-family: 'Chivo', sans-serif;
     /* border: 2px solid #d35823; */
@@ -93,14 +115,18 @@ export default {
 h3{
 font-size: 2.9vw;
 font-weight: 700;
-
+width: 65%;
+margin-left: auto;
+margin-right: auto;
+text-align: left;
 }
 
 h2{
-font-size: 3.1vw;
+font-size: 2.4vw;
 font-weight: 400;
-width: 75%;
+width: 65%;
 margin: auto;
+text-align: left;
 }
 
 button{
@@ -112,7 +138,8 @@ font-family: 'Chivo', sans-serif;
 font-weight: 700;
 color:#f83e4b ;
 margin: 25px;
-border: none;
+/* border: .2px solid #444; */
+outline: none;
 
 }
 </style>

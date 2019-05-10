@@ -95,8 +95,6 @@ methods: {
 .prev{
 color: #8ecccc;
 font-size: 1.6vw;
-width: 50vw;
-margin:auto;
 }
 .userInput{
   height: 15vh;

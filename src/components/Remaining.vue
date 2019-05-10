@@ -104,8 +104,6 @@ export default {
 .prev{
 color: #292830;
 font-size: 1.6vw;
-width: 50vw;
-margin:auto;
 }
 .userInput{
   height: 15vh;

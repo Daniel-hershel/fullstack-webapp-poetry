@@ -1,29 +1,6 @@
-# vfire-template
+This little app is designed to guide you through the process of writing a form poem.
+A form poem is (you guessed it) a poem that follows a form.
 
-## Project setup
-```
-npm install
-```
+In the case of this app, you will respond to 3 guided prompts which will lead you through a quick creative process of reflecting on your past, present, and future self...
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+In only three easy steps you will have created your own Creative Reflection Poem!

@@ -31,6 +31,7 @@ export default {
 
    }
  },
+
  methods: {
    navigate(){
      router.push({name: "Shedding"})
@@ -50,19 +51,17 @@ export default {
 
 .hello{
   display: grid;
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   margin-top:0;
-  grid-gap: 2.5vh;
-  grid-template-rows: 10vh 65vh 10vh;
+  grid-gap: 2.9vh;
+  grid-template-rows: 18vh 60vh 15vh;
   grid-template-columns: 95vw;
   margin:auto;
   margin-top:0;
   padding-top:0;
   background: #29252c;
   color: #ffea85;
-
-
 }
 
 .next{
@@ -81,6 +80,8 @@ color:#f76262;
   width: 75%;
     margin-left:auto;
   margin-right:auto;
+  justify-content: center;
+
   /* not working or has no effect right now */
   /* align-items: center; */
 
@@ -106,10 +107,7 @@ and (orientation: portrait) {
 h3{
   font-size:3.9vw;
 }
-.instructions{
-  justify-content: center;
 
-}
 }
 
 /* Landscape */
@@ -125,7 +123,22 @@ and (orientation: landscape) {
  }
 }
  
+/* ----------- Large Screens ----------- */
+@media screen and (min-width: 1500px) {
+  h3{
+    font-size: 2.2vw;
+  }
+  .instructions{
+      /* background: pink; */
 
+  }
+}
+@media screen and (min-width: 1700px) {
+  h3{
+    font-size: 1.7vw;
+  }
+  .instructions{
 
-
+  }
+}
 </style>

@@ -10,6 +10,9 @@ import End from './components/End.vue'
 import Gallery from './components/Gallery.vue'
 import FitText from './vue-fit-text/index.js';
 import velocity from 'velocity-animate'
+import ToggleButton from 'vue-js-toggle-button'
+
+
 // import OriDomi from './oridomi.min.js'
 Object.defineProperty(Vue.prototype, '$vel', { value: velocity });
 // Object.defineProperty(Vue.prototype, 'OriDomi', { value: OriDomi });
@@ -17,6 +20,7 @@ Object.defineProperty(Vue.prototype, '$vel', { value: velocity });
 Vue.use(FitText);
 Vue.use(VueFire)
 Vue.use(VueRouter)
+Vue.use(ToggleButton)
 Vue.config.productionTip = false
 
 const routes = [
